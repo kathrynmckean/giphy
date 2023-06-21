@@ -3,7 +3,7 @@ async function getGif() {
     let userInput = document.getElementById("input").value
     console.log(userInput)
 
-    let giphyApiKey = process.env.API_KEY
+    let giphyApiKey = 'wL2VhWAS3RK5vRLV4Xur1HwpaF9O3dpp'
     let giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=pg-13&api_key=${giphyApiKey}`
 
     const response = await fetch(giphyApiURL)
@@ -25,3 +25,6 @@ async function getGif() {
 
 // Just found out that var is old and out-of-date which is the opposite of what I thought
 // also found out that I should be using async/await
+
+//in reality I would want to hide my API key in an env file but I can't do that using github pages which requires all files in the repository to be public
+// My key is locked so it can't be abused so until I move away from github pages I'm going to leave it as is.
